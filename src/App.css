@@ -1,0 +1,86 @@
+
+.registration-form-large h3 {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.registration-form-large label {
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.registration-form-large input,
+.registration-form-large select,
+.registration-form-large textarea {
+	font-size: 1.05rem;
+	font-weight: 600;
+}
+
+.registration-form-large input::placeholder,
+.registration-form-large textarea::placeholder {
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+/* Professional Logo Styling */
+.brand-logo {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	transition: all 0.3s ease;
+}
+
+.brand-logo img {
+	height: 45px;
+	width: auto;
+	object-fit: contain;
+	transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.brand-logo img:hover {
+	transform: scale(1.05);
+	filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.brand-logo h1 {
+	font-size: 1.5rem;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	transition: color 0.3s ease;
+}
+
+.brand-logo:hover h1 {
+	color: #3b82f6;
+}
+
+/* Dashboard Logo (Bigger) */
+.brand-logo-dashboard img {
+	height: 56px;
+}
+
+/* Login Page Logo (Centered) */
+.brand-logo-login {
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.brand-logo-login img {
+	height: 70px;
+}
+
+/* Smooth transitions for branding */
+@keyframes logoGlow {
+	0% {
+		box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+	}
+	50% {
+		box-shadow: 0 0 10px 5px rgba(59, 130, 246, 0.1);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+	}
+}
+
+.brand-logo-animated img {
+	animation: logoGlow 3s infinite;
+}
