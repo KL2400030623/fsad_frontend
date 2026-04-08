@@ -1,0 +1,89 @@
+﻿On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    backend/.classpath
+	deleted:    backend/.factorypath
+	deleted:    backend/.mvn/wrapper/maven-wrapper.jar
+	deleted:    backend/.mvn/wrapper/maven-wrapper.properties
+	deleted:    backend/.project
+	deleted:    backend/.settings/org.eclipse.core.resources.prefs
+	deleted:    backend/.settings/org.eclipse.jdt.apt.core.prefs
+	deleted:    backend/.settings/org.eclipse.jdt.core.prefs
+	deleted:    backend/.settings/org.eclipse.m2e.core.prefs
+	deleted:    backend/.settings/org.springframework.ide.eclipse.prefs
+	deleted:    backend/Dockerfile
+	deleted:    backend/README.md
+	deleted:    backend/maven-wrapper-temp/.mvn/wrapper/maven-wrapper.jar
+	deleted:    backend/maven-wrapper-temp/mvnw
+	deleted:    backend/maven-wrapper-temp/mvnw.cmd
+	deleted:    backend/maven-wrapper-temp/mvnwDebug
+	deleted:    backend/maven-wrapper-temp/mvnwDebug.cmd
+	deleted:    backend/maven-wrapper.zip
+	deleted:    backend/mvnw.cmd
+	deleted:    backend/pom.xml
+	deleted:    backend/src/main/java/com/oms/backend/BackendApplication.java
+	deleted:    backend/src/main/java/com/oms/backend/config/DataInitializer.java
+	deleted:    backend/src/main/java/com/oms/backend/controllers/AppointmentController.java
+	deleted:    backend/src/main/java/com/oms/backend/controllers/AuthController.java
+	deleted:    backend/src/main/java/com/oms/backend/controllers/PrescriptionController.java
+	deleted:    backend/src/main/java/com/oms/backend/models/Appointment.java
+	deleted:    backend/src/main/java/com/oms/backend/models/Prescription.java
+	deleted:    backend/src/main/java/com/oms/backend/models/User.java
+	deleted:    backend/src/main/java/com/oms/backend/payload/request/LoginRequest.java
+	deleted:    backend/src/main/java/com/oms/backend/payload/request/SignupRequest.java
+	deleted:    backend/src/main/java/com/oms/backend/payload/response/JwtResponse.java
+	deleted:    backend/src/main/java/com/oms/backend/payload/response/MessageResponse.java
+	deleted:    backend/src/main/java/com/oms/backend/repository/AppointmentRepository.java
+	deleted:    backend/src/main/java/com/oms/backend/repository/PrescriptionRepository.java
+	deleted:    backend/src/main/java/com/oms/backend/repository/UserRepository.java
+	deleted:    backend/src/main/java/com/oms/backend/security/WebSecurityConfig.java
+	deleted:    backend/src/main/java/com/oms/backend/security/jwt/AuthEntryPointJwt.java
+	deleted:    backend/src/main/java/com/oms/backend/security/jwt/AuthTokenFilter.java
+	deleted:    backend/src/main/java/com/oms/backend/security/jwt/JwtUtils.java
+	deleted:    backend/src/main/java/com/oms/backend/security/services/UserDetailsImpl.java
+	deleted:    backend/src/main/java/com/oms/backend/security/services/UserDetailsServiceImpl.java
+	deleted:    backend/src/main/resources/application.properties
+	deleted:    backend/startup-log.txt
+	deleted:    backend/target/classes/META-INF/MANIFEST.MF
+	deleted:    backend/target/classes/META-INF/maven/com.oms/backend/pom.properties
+	deleted:    backend/target/classes/META-INF/maven/com.oms/backend/pom.xml
+	deleted:    backend/target/classes/application.properties
+	deleted:    backend/target/classes/com/oms/backend/BackendApplication.class
+	deleted:    backend/target/classes/com/oms/backend/config/DataInitializer.class
+	deleted:    backend/target/classes/com/oms/backend/controllers/AppointmentController.class
+	deleted:    backend/target/classes/com/oms/backend/controllers/AuthController.class
+	deleted:    backend/target/classes/com/oms/backend/controllers/PrescriptionController.class
+	deleted:    backend/target/classes/com/oms/backend/models/Appointment.class
+	deleted:    backend/target/classes/com/oms/backend/models/Prescription.class
+	deleted:    backend/target/classes/com/oms/backend/models/User.class
+	deleted:    backend/target/classes/com/oms/backend/payload/request/LoginRequest.class
+	deleted:    backend/target/classes/com/oms/backend/payload/request/SignupRequest.class
+	deleted:    backend/target/classes/com/oms/backend/payload/response/JwtResponse.class
+	deleted:    backend/target/classes/com/oms/backend/payload/response/MessageResponse.class
+	deleted:    backend/target/classes/com/oms/backend/repository/AppointmentRepository.class
+	deleted:    backend/target/classes/com/oms/backend/repository/PrescriptionRepository.class
+	deleted:    backend/target/classes/com/oms/backend/repository/UserRepository.class
+	deleted:    backend/target/classes/com/oms/backend/security/WebSecurityConfig.class
+	deleted:    backend/target/classes/com/oms/backend/security/jwt/AuthEntryPointJwt.class
+	deleted:    backend/target/classes/com/oms/backend/security/jwt/AuthTokenFilter.class
+	deleted:    backend/target/classes/com/oms/backend/security/jwt/JwtUtils.class
+	deleted:    backend/target/classes/com/oms/backend/security/services/UserDetailsImpl.class
+	deleted:    backend/target/classes/com/oms/backend/security/services/UserDetailsServiceImpl.class
+	deleted:    backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+	deleted:    backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+	modified:   src/features/PatientPanel.jsx
+	modified:   src/pages/LoginPage.jsx
+	modified:   src/pages/PatientRegistrationPage.jsx
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	frontend_log.txt
+	frontend_remote.txt
+	frontend_tree.txt
+	git_status_output.txt
+	src/services/
+
+no changes added to commit (use "git add" and/or "git commit -a")

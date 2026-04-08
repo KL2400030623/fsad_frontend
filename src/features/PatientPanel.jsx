@@ -32,7 +32,7 @@ function PatientPanel({
   // Use real current user if available, otherwise fallback
   const patientDetails = {
     fullName: currentUser?.name || 'Alice Brown',
-    dateOfBirth: patientRecords?.dateOfBirth || 'Not specified',
+    dateOfBirth: currentUser?.dateOfBirth || patientRecords?.dateOfBirth || 'Not specified',
     gender: patientRecords?.gender || 'Not specified',
     phone: currentUser?.contact || patientRecords?.phone || 'Not specified',
     email: currentUser?.email || 'alice.brown@email.com',

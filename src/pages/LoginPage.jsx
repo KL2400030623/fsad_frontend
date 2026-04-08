@@ -38,18 +38,45 @@ export default function LoginPage({ onLogin, loginError = '' }) {
   const role = searchParams.get('role') || 'patient';
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState(loginError);
+  const [errors, setErrors] = useState({});
+  const [globalError, setGlobalError] = useState(loginError);
   const [loading, setLoading] = useState(false);
+
+  const validateField = (name, value) => {
+    let errorMsg = '';
+    if (name === 'email') {
+      if (!value) errorMsg = 'Email is required';
+      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) errorMsg = 'Invalid email format';
+    }
+    if (name === 'password') {
+      if (!value) errorMsg = 'Password is required';
+      else if (value.length < 6) errorMsg = 'Password must be at least 6 characters';
+    }
+    setErrors(prev => ({ ...prev, [name]: errorMsg }));
+    return !errorMsg;
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    validateField('email', e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+    validateField('password', e.target.value);
+  };
 
   const info = roleInfo[role] || roleInfo.patient;
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setError('');
+    setGlobalError('');
     setLoading(true);
 
-    if (!email || !password) {
-      setError('Please enter both email and password');
+    const isEmailValid = validateField('email', email);
+    const isPasswordValid = validateField('password', password);
+
+    if (!isEmailValid || !isPasswordValid) {
       setLoading(false);
       return;
     }
@@ -93,9 +120,9 @@ export default function LoginPage({ onLogin, loginError = '' }) {
 
             {/* Form */}
             <div className="p-10 space-y-8">
-              {error && (
+              {globalError && (
                 <div className="rounded-xl bg-red-50 border-2 border-red-200 px-5 py-4">
-                  <p className="text-red-700 font-bold text-lg">⚠️ {error}</p>
+                  <p className="text-red-700 font-bold text-lg">⚠️ {globalError}</p>
                 </div>
               )}
 
@@ -109,9 +136,10 @@ export default function LoginPage({ onLogin, loginError = '' }) {
                     type="email"
                     placeholder="Enter your email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="w-full rounded-xl border-2 border-slate-300 bg-slate-50 px-5 py-4 text-lg text-slate-800 placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition"
+                    onChange={handleEmailChange}
+                    className={`w-full rounded-xl border-2 bg-slate-50 px-5 py-4 text-lg text-slate-800 placeholder:text-slate-400 focus:ring-2 transition ${errors.email ? 'border-red-500 focus:border-red-500 focus:ring-red-200' : 'border-slate-300 focus:border-blue-500 focus:ring-blue-200'}`}
                   />
+                  {errors.email && <p className="text-red-500 text-sm mt-2 font-semibold">{errors.email}</p>}
                 </div>
 
                 {/* Password Field */}
@@ -123,9 +151,10 @@ export default function LoginPage({ onLogin, loginError = '' }) {
                     type="password"
                     placeholder="Enter your password"
                     value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    className="w-full rounded-xl border-2 border-slate-300 bg-slate-50 px-5 py-4 text-lg text-slate-800 placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition"
+                    onChange={handlePasswordChange}
+                    className={`w-full rounded-xl border-2 bg-slate-50 px-5 py-4 text-lg text-slate-800 placeholder:text-slate-400 focus:ring-2 transition ${errors.password ? 'border-red-500 focus:border-red-500 focus:ring-red-200' : 'border-slate-300 focus:border-blue-500 focus:ring-blue-200'}`}
                   />
+                  {errors.password && <p className="text-red-500 text-sm mt-2 font-semibold">{errors.password}</p>}
                 </div>
 
                 {/* Remember & Forgot */}

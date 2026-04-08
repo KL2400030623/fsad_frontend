@@ -1,0 +1,2 @@
+﻿origin	https://github.com/KL2400030623/fsad_final_project.git (fetch)
+origin	https://github.com/KL2400030623/fsad_final_project.git (push)

@@ -751,6 +751,7 @@ function PatientRegistrationPage({ doctors, setUsers, users, embedded = false })
           email: patientEmail,
           password: password,
           contact: formData.phone,
+          dateOfBirth: formData.dateOfBirth,
           role: 'patient'
         })
       });
@@ -804,6 +805,8 @@ function PatientRegistrationPage({ doctors, setUsers, users, embedded = false })
           email: patientEmail,
           role: 'patient',
           token: authToken, // Include the token for API requests
+          dateOfBirth: formData.dateOfBirth,
+          contact: formData.phone
         }));
         localStorage.setItem('isAuthenticated', JSON.stringify(true));
         localStorage.setItem('activeRole', JSON.stringify('patient'));
